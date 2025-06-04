@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 300f;
 
     float H, V;
 
     Rigidbody2D rigid;
+
+    private Animator anim;
+
     bool Moving = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,15 +29,17 @@ public class move : MonoBehaviour
             H = Input.GetAxisRaw("Horizontal");
             V = Input.GetAxisRaw("Vertical");
         }
+       
 
         if (H < 0.0f)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(-10, 10);
         }
         else if (H > 0.0f)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(10, 10);
         }
+
     }
     void FixedUpdate()
     {

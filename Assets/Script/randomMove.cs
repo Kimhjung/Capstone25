@@ -17,15 +17,15 @@ public class randomMove : MonoBehaviour
     {
         if (other.collider.tag == "WallLeft")
         {
-            Debug.Log("Collision" + other.gameObject.name + "left");
+            Debug.Log("Collision " + other.gameObject.name + " left");
             transform.localScale = new Vector2(-1, 1);
-            rigid.velocity = new Vector2(1.5f, 0);
+            rigid.velocity = new Vector2(50f, 0);
         }
         else if (other.collider.tag == "WallRight")
         {
-            Debug.Log("Collision"+ other.gameObject.name + "right");
+            Debug.Log("Collision "+ other.gameObject.name + " right");
             transform.localScale = new Vector2(1, 1);
-            rigid.velocity = new Vector2(-1.5f, 0);
+            rigid.velocity = new Vector2(-50f, 0);
         }
     }
 
@@ -35,9 +35,8 @@ public class randomMove : MonoBehaviour
 
         while (true)
         {
-            float dir = Random.Range(-2f, 2f);
+            float dir = Random.Range(-100f, 100f);
 
-            yield return new WaitForSeconds(3);
             rigid.velocity = new Vector2(dir, 0);
 
             if (dir <= 0)
@@ -48,6 +47,8 @@ public class randomMove : MonoBehaviour
             {
                 transform.localScale = new Vector2(-1, 1);
             }
+
+            yield return new WaitForSeconds(3);
         }
         
     }

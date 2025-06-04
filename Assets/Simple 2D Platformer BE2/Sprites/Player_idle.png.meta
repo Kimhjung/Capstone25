@@ -1,43 +1,34 @@
 fileFormatVersion: 2
-guid: 274d64617113287499ed1c4165d1d8f3
+guid: 10f3cacccb0c4c547be76836eba20664
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2322180950842035098
-    second: Bronze 0
+      213: -6447722072507503168
+    second: Idle 0
   - first:
-      213: -4893972260818282012
-    second: Bronze 1
+      213: 2962027833772318483
+    second: Idle 1
   - first:
-      213: -6323751108524238166
-    second: Bronze 2
+      213: -2453208753318357113
+    second: Run 0
   - first:
-      213: 2722280177590742205
-    second: Bronze 3
+      213: 6348790710242686107
+    second: Run 1
   - first:
-      213: 6582046967323461550
-    second: Silver 0
+      213: 5513914976837039818
+    second: Run 2
   - first:
-      213: 1942777921290549423
-    second: Silver 1
+      213: -434675778434299504
+    second: Run 3
   - first:
-      213: 8793606821965667882
-    second: Silver 2
+      213: -5761754228987130096
+    second: Jump 0
   - first:
-      213: 3444832735345940322
-    second: Silver 3
+      213: 5907920678353447086
+    second: Jump 1
   - first:
-      213: -4986890610287934012
-    second: Gold 0
-  - first:
-      213: 6143208460787649835
-    second: Gold 1
-  - first:
-      213: 7609282858266732271
-    second: Gold 2
-  - first:
-      213: -6288512792030432889
-    second: Gold 3
+      213: -6086044393419928071
+    second: Jump 2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +96,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -159,85 +150,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coins_0
+      name: Player_idle_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 34
+        width: 13
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe500ee1c1b790e40bf987b195214faa
-      internalID: -277390210
+      spriteID: 1bf84203267657d408fe9ac17f14c07e
+      internalID: 731215104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coins_1
+      name: Player_idle_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 4
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 18
+        y: 34
+        width: 13
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75d8e41aee62fa47844f9666720d95e
-      internalID: 302190892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_2
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 4
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f51371f5c8c1238478f4ae9a4f2af62f
-      internalID: 1035523760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Coins_3
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 4
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 303aac4208bb65e418f4332044595b96
-      internalID: 1387913206
+      spriteID: d9cbdcb5a9a8a924da48c6cb883ad66a
+      internalID: 594891037
       vertices: []
       indices: 
       edges: []
@@ -245,7 +194,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e6a3458aea67d6468fc14ee8c46abba
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -253,10 +202,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coins_0: -277390210
-      Coins_1: 302190892
-      Coins_2: 1035523760
-      Coins_3: 1387913206
+      Player_idle_0: 731215104
+      Player_idle_1: 594891037
+      Player_idle_2: -1596451650
+      Player_idle_3: 1029264566
+      Player_idle_4: 907480948
+      Player_idle_5: -2100696726
+      Player_idle_6: 199246708
+      Player_idle_7: 450603483
+      Player_idle_8: -1915847869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
