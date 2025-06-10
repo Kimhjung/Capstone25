@@ -33,11 +33,11 @@ public class move : MonoBehaviour
 
         if (H < 0.0f)
         {
-            transform.localScale = new Vector2(-10, 10);
+            transform.localScale = new Vector2(-1, 1);
         }
         else if (H > 0.0f)
         {
-            transform.localScale = new Vector2(10, 10);
+            transform.localScale = new Vector2(1, 1);
         }
 
     }

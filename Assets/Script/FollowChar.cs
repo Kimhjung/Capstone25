@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FollowChar : MonoBehaviour
 {
-    public float leftLimit = 0f;
-    public float rightLimit = 0f;
-    public float topLimit = 0f;
-    public float bottomLimit = 0f;
+    public float leftLimit = -1920f;
+    public float rightLimit = 1920f;
+    public float topLimit = -1080f;
+    public float bottomLimit = 1080f;
     // Start is called before the first frame update
     void Start()
     {

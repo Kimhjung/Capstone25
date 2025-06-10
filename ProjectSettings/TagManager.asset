@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallLeft
   - WallRight
+  - Monster
   layers:
   - Default
   - TransparentFX
