@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02905183c73b4664ab04f94b5303c60a
+guid: 35bbfc2c57d41444daf0e0f9fd746046
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 0.1
+  spritePixelsToUnits: 3
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -147,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_idle_0
+      name: Enemy_death_0
       rect:
         serializedVersion: 2
         x: 1
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_idle_1
+      name: Enemy_death_1
       rect:
         serializedVersion: 2
         x: 18
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_idle_2
+      name: Enemy_death_2
       rect:
         serializedVersion: 2
         x: 35
@@ -220,9 +220,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy_idle_0: -574904255
-      Enemy_idle_1: 925587780
-      Enemy_idle_2: 1095605035
+      Enemy_death_0: -574904255
+      Enemy_death_1: 925587780
+      Enemy_death_2: 1095605035
       Enemy_idle_3: 147912138
       Enemy_idle_4: 809466091
       Enemy_idle_5: 582552126

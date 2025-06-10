@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 0.1
+  spritePixelsToUnits: 3
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -184,48 +184,6 @@ TextureImporter:
       bones: []
       spriteID: 63d7657710da3f84aa120145108a4cae
       internalID: 925587780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_idle_2
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 17
-        width: 14
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae6f959b217db7d438e430dfcb176745
-      internalID: 1095605035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_idle_3
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 17
-        width: 14
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94caa0bb909cb71469b90fd0815a856e
-      internalID: 147912138
       vertices: []
       indices: 
       edges: []

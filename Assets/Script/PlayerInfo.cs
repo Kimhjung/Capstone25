@@ -1,53 +1,64 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public GameObject Monster;
+    public int Current_HP = 1000;
+    public int Max_HP = 1000;
+    public float speed = 5f;
+    public float attackRange = 10;          //공격범위
+    public float attackCooldown = 1f;
+    public int attackDamage = 50;
+
     
-    public string PlayerName;
-    public int Current_HP;  //캐릭터 현재 체력
-    public int HP;          // 캐릭터 총 체력
 
-    public int Attack;
-
-    public Text _Name;      // ui상의 캐릭터 이름
-    public Text _HP;        // ui상의 캐릭터 HP
-
-    public Animator Anim;
-
-    private void Start()
+    void Update()
     {
-        _Name.text = PlayerName;
-        _HP.text = Current_HP + "/" + HP;
-
-        Monster = GameObject.FindGameObjectWithTag("Monster");
-    }
-
-    private void Update()
-    {
-        if(Monster != null)
+        if (Current_HP <= 0)
         {
-            if (Monster.GetComponent<MonsterInfo>().Current_HP > 0)
-            {
-                Anim.SetInteger("AnimState", 2);
-            }
-        }
-        else
-        {
-            Anim.SetInteger("AnimState", 0);
+            
+            Debug.Log("플레이어 사망");
         }
     }
 
-    //애니메이션 재생 타이밍에 함수 호출
-    public void AttackMonster()
+    public MonoBehaviour[] PlayerAI;
+    public SpriteRenderer spriteRenderer;
+    public float blinkDuration = 1.5f;     // 총 깜빡이는 시간
+    public float blinkInterval = 0.2f;      // 깜빡이 간격
+
+    void Die()
     {
-        if(Monster.GetComponent<MonsterInfo>().Current_HP > 0)
+        Debug.Log("플레이어 사망");
+
+        foreach (MonoBehaviour script in PlayerAI)
         {
-            Monster.GetComponent<MonsterInfo>().Current_HP -= Attack;
+            if (script != null)
+                script.enabled = false;
         }
-        
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+        if (spriteRenderer != null)
+            StartCoroutine(BlinkRed());
     }
+
+    IEnumerator BlinkRed()
+    {
+        Color originalColor = spriteRenderer.color;
+        Color redColor = new Color(1f, 0.2f, 0.2f, 1f);
+
+        float timer = 0f;
+        while (timer < blinkDuration)
+        {
+            spriteRenderer.color = redColor;
+            yield return new WaitForSeconds(blinkInterval / 2);
+
+            spriteRenderer.color = originalColor;
+            yield return new WaitForSeconds(blinkInterval / 2);
+
+            timer += blinkInterval;
+        }
+
+        spriteRenderer.color = originalColor;
+    }
+
 }
