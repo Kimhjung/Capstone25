@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 8186106605316153794}
   - component: {fileID: 4329877653118906821}
   - component: {fileID: 5590408038627696956}
+<<<<<<< HEAD
   - component: {fileID: 2264379841913082504}
+=======
+  - component: {fileID: 4555817935845674067}
+>>>>>>> 915e8c3a991972e7591127e38ad686e03857de4f
   m_Layer: 0
   m_Name: Hamji_Idle
   m_TagString: Player
@@ -149,7 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+<<<<<<< HEAD
 --- !u!70 &2264379841913082504
+=======
+--- !u!70 &4555817935845674067
+>>>>>>> 915e8c3a991972e7591127e38ad686e03857de4f
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,6 +189,11 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: 0.047221422, y: 1.155}
   m_Size: {x: 1.9216094, y: 2.31}
+=======
+  m_Offset: {x: 8.818909, y: 115.5}
+  m_Size: {x: 182.95538, y: 231}
+>>>>>>> 915e8c3a991972e7591127e38ad686e03857de4f
   m_Direction: 0

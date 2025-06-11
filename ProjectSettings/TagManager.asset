@@ -4,10 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - WallL
   - WallR
   - WallT
   - WallB
+=======
+  - WallLeft
+  - WallRight
+  - Monster
+>>>>>>> 915e8c3a991972e7591127e38ad686e03857de4f
   layers:
   - Default
   - TransparentFX
