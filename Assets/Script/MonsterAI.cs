@@ -12,6 +12,8 @@ public class MonsterAI : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer;
 
+    private bool isDead = false;
+
     private bool isTouchingPlayer = false;
 
     void Start()
@@ -33,7 +35,8 @@ public class MonsterAI : MonoBehaviour
 
     void Update()
     {
-        
+        if (isDead) return;     //죽었으면 끝
+
         Vector2 dir = (playerTransform.position - transform.position).normalized;
 
         if (isTouchingPlayer)
@@ -65,7 +68,7 @@ public class MonsterAI : MonoBehaviour
         MonsterInfo info = GetComponent<MonsterInfo>();
         if (info != null && info.Current_HP <= 0)
         {
-            Die();
+            info.Die();
             return;
         }
 
@@ -76,31 +79,6 @@ public class MonsterAI : MonoBehaviour
         Debug.Log("플레이어 체력: " + player.Current_HP);
         
         anim?.SetTrigger("isAttack");
-    }
-
-    public void Die()
-    {
-        Debug.Log("몬스터 사망");
-
-        // 죽는 애니메이션만 실행
-        GetComponent<Animator>()?.SetTrigger("isDead");
-
-        // 물리 정지
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
-        // 타겟 제거
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            var ai = player.GetComponent<PlayerAI>();
-            if (ai != null && ai.currentTarget == this.gameObject)
-            {
-                ai.currentTarget = null;
-                ai.FindNewTarget();
-            }
-        }
-
-        gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
